@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* BG Video */
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+/* Musik */
+.music {
+  padding-top: 50px;
+}
+
+.container-music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.player {
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #282828 0.3;
+  padding: 50px 10px 50px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 6px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  background-color:  transparent;
+  backdrop-filter: blur(6px);
+}
+
+.cover {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.info {
+  text-align: center;
+}
+
+.info p {
+  color: #fff;
+  margin: 5px 0;
+}
+
+.title {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.artist {
+  font-size: 14px;
+  color: #fff;
+}
+
+.progress {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.playPause {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  height: 35px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  padding-top: 25px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bar + Durasi */
+.time-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 5px;
+  appearance: none;
+  background: #555;
+  border-radius: 5px;
+  outline: none;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.current-time,
+.duration {
+  color: white;
+  font-size: 12px;
+  width: 40px;
+  text-align: center;
+}
+
+/* Lirik */
+.lyrics {
+  max-height: 150px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1.2rem;
+  position: relative;
+  margin-top: 40px;
+}
+
+.lyrics p {
+  margin: 1px 0;
+  opacity: 0.6;
+  transition: opacity 0.3s, transform 0.3s;
+  display: none; /* Default semua hidden */
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  color: #868484;
+}
+
+.lyrics p.active {
+  font-weight: bold;
+  opacity: 1;
+  transform: scale(1.2);
+  color: #1db954;
+  display: block;
+}

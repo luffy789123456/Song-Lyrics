@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="/img/background.mp4" type="video/mp4">
+      </video>
+    <div class="music">
+        <div class="player">
+          <img class="cover" src="" alt="Cover" />
+          <div class="info">
+            <p class="title"></p>
+            <p class="artist"></p>
+          </div>
+  
+          <div class="time-control">
+            <span class="current-time">0:00</span>
+            <input type="range" class="progress-bar" value="0" min="0" step="1" />
+            <span class="duration">0:00</span>
+          </div>
+  
+          <div class="controls">
+            <button class="prev">&#9664;&#9664;</button>
+            <button class="playPause">&#9654;</button>
+            <button class="next">&#9654;&#9654;</button>
+          </div>
+          <audio id="audioPlayer"></audio>
+        </div>
+        <div class="lyrics"></div>
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
